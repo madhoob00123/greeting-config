@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.net.URLEncoder;
+
 @Controller
 public class QuoteController {
 
@@ -19,7 +21,10 @@ public class QuoteController {
     @RequestMapping("/random-quote")
     public String getView(Model model) {
         model.addAttribute("quote", quoteService.getQuote());
-        model.addAttribute("uri", quoteService.getQuoteServiceURL());
+        System.out.println(quoteService.getQuoteServiceURL());
+        model.addAttribute("uri",   quoteService.getQuoteServiceURL());
         return "quote";
     }
+
+
 }

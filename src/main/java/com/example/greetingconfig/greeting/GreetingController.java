@@ -36,7 +36,7 @@ public class GreetingController {
             model.addAttribute("fortune", fortuneService.getFortune());
         }
 
-        //resolves to the greeting.jsp velocity template
+        //resolves to the greeting.vm velocity template
         return "greeting";
     }
 }

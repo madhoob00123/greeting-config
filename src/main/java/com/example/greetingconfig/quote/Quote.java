@@ -1,8 +1,19 @@
 package com.example.greetingconfig.quote;
 
-public class Quote {
+import java.io.Serializable;
+
+public class Quote implements Serializable {
     private String text;
     private String author;
+
+
+    public Quote(){
+
+    }
+    public Quote(String text, String author) {
+        this.text = text;
+        this.author = author;
+    }
 
     public String getText() {
         return text;
